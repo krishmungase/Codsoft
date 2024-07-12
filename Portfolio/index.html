@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Krishna Mungase</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script
+      src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+      type="module"
+    ></script>
+  </head>
+
+  <body class="min-h-screen min-w-screen bg-slate-950 bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)">
+    <div class="">
+      <!-- Navbar -->
+      <nav
+        class="bg-slate-900 flex items-center w-screen justify-between mb-10 h-20"
+      >
+        <div class="ml-5 px-10 py-10 flex items-center justify-start">
+          <div>
+            <div class="mx-3">
+              <button
+                type="button"
+                class="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-1 focus:ring-white focus:ring-offset-1 focus:ring-offset-gray-800"
+                id="user-menu-button"
+                aria-expanded="false"
+                aria-haspopup="true"
+                onclick="toggleUserMenu()"
+              >
+                <span class="absolute -inset-1.5"></span>
+                <span class="sr-only">Open user menu</span>
+                <img class="h-8 w-8 rounded-full" src="./img/WhatsApp Image 2024-06-30 at 16.57.27.jpeg" alt="" />
+              </button>
+            </div>
+            <div
+              id="user-menu"
+              class="hidden absolute left-17 z-10 mt-3 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+              role="menu"
+              aria-orientation="vertical"
+              aria-labelledby="user-menu-button"
+              tabindex="-1"
+            >
+              <a
+                href="#"
+                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200 rounded-sm text-sm"
+                role="menuitem"
+                tabindex="-1"
+                id="user-menu-item-0"
+              >
+                <span class="mr-3"><i class="fa-solid fa-user"></i></span
+                >Profile</a
+              >
+              <a
+                href="#"
+                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200 rounded-sm"
+                role="menuitem"
+                tabindex="-1"
+                id="user-menu-item-1"
+                ><span class="mr-3"><i class="fa-solid fa-gear"></i></span
+                >Settings</a
+              >
+              <a
+                href="#"
+                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200 rounded-sm"
+                role="menuitem"
+                tabindex="-1"
+                id="user-menu-item-2"
+                ><span class="mr-3"
+                  ><i class="fa-solid fa-right-from-bracket"></i></span
+                >Sign out</a
+              >
+            </div>
+          </div>
+          <a href="#" class="text-2xl md:text-3xl font-semibold text-white"
+            ><span class="text-[#2196f3]">My</span>Portfolio_</a
+          >
+        </div>
+        <ul class="hidden md:flex items-center px-10 py-10 flex space-x-4 text-[#666]">
+          <a
+            href="#AboutMe"
+            class="bg-gray-700 rounded-md px-3 py-2 text-sm font-medium text-white hover:text-[#2196f3]"
+            >AboutMe</a
+          >
+          <a
+            href="#Experience"
+            class="text-gray-300 hover:bg-gray-700 rounded-md px-3 py-2 text-sm text-white hover:text-[#2196f3]"
+            >Experience</a
+          >
+          <a
+            href="#Project"
+            class="text-gray-300 hover:bg-gray-700 rounded-md px-3 py-2 text-sm text-white hover:text-[#2196f3]"
+            >Projects</a
+          >
+          <a
+            href="#Connect"
+            class="text-gray-300 hover:bg-gray-700 rounded-md px-3 py-2 text-sm text-white hover:text-[#2196f3]"
+            >Contact</a
+          >
+          <a
+            class="text-gray-300 hover:bg-gray-700 rounded-lg px-3 py-1 text-2xl flex items-center justify-center cursor-pointer"
+            id="darkmode"
+            ><ion-icon name="moon-outline"></ion-icon
+          ></a>
+          <div
+            id="lightMode"
+            class="hidden absolute right-3 top-14 z-10 mt-3 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+            role="menu"
+            aria-orientation="vertical"
+            aria-labelledby="user-menu-button"
+            tabindex="-1"
+          >
+            <a
+              href="#"
+              class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200 rounded-sm text-sm"
+              role="menuitem"
+              tabindex="-1"
+              id="item-1"
+            >
+              <span class="mr-3"></span>Switch To DarkMode</a
+            >
+          </div>
+        </ul>
+        <div class="md:hidden text-white mr-10">
+          Menu Bar
+        </div>
+      </nav>
+
+
+      <!-- Main Section -->
+
+      <div class="flex items-center justify-center flex-col md:grid md:grid-cols-2 gap-x-20 min-h-full pt-12 container mx-auto mb-12">
+        <div
+          class="flex md:justify-start justify-center md:justify-center flex-col px-10 mx-10 space-y-5 py-10 mb-[100px] md:mb-0"
+          style="font-family: 'Lato', sans-serif"
+        >
+          <p class="text-3xl md:text-2xl md:text-left font-semibold mb-4 text-[#fff]">
+            Hello, my name is
+          </p>
+          <p class="text-6xl text-center md:text-left mb-4 font-semibold text-[#fff]">
+            Krishna <span class="text-[#39A7FF] italic">Mungase</span>
+          </p>
+          <p class="text-2xl md:text-left md:text-xl text-[#777] mb-4">
+            I'm a
+            <span class="italic text-[#fff]" id="text">Web Developer</span>
+          </p>
+          <div class="space-x-2">
+            <button
+              class="bg-gray-700 hover:bg-gray-900 text-white text-sm font-medium py-2 px-4 rounded-lg shadow-md transition duration-300 transform hover:scale-105"
+              onclick="downloadCV()"
+            >
+              Download CV
+            </button>
+
+            <a
+              href="#Connect"
+              class="bg-gray-200 hover:bg-gray-300 text-black text-sm font-medium py-2 px-4 rounded-lg shadow-md transition duration-300 transform hover:scale-105"
+            >
+              Contact Us
+            </a>
+          </div>
+        </div>
+        <!-- Img -->
+        <div class="flex items-center justify-center mb-10 w-[450px] md:w-[500px]">
+          <img src="./img/WhatsApp Image 2024-06-30 at 16.57.27.jpeg" alt="" class="rounded-full" />
+        </div>
+      </div>
+
+
+      <!-- My journey -->
+      <div
+        class="flex items-center justify-center flex-col mt-10 mb-10 min-w-screen min-h-screen"
+        id="AboutMe"
+      >
+        <div class="mt-auto">
+          <p
+            class="text-2xl md:text-3xl font-normal text-[#fff]"
+            style="font-family: 'Outfit', sans-serif"
+          >
+            My Journey, My Passion:
+            <span class="text-[#39A7FF] italic">Krishna'</span>s Story
+          </p>
+        </div>
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 min-h-full pt-12 container mx-auto my-auto"
+        >
+          <div class="h-full flex items-center justify-center mb-[100px] md:mb-0">
+            <img
+              src="./img/5484597-removebg-preview.png"
+              alt=""
+              class="w-[350px] md:w-[450px]"
+            />
+          </div>
+          <div class="h-full flex justify-center items-center flex-col">
+            <p class="text-2xl md:text-3xl font-normal text-[#fff] mb-6">Education</p>
+            <div class="flex items-center justify-center flex-row mb-5">
+              <div
+                class="bg-gray-800 text-gray-200 h-36 w-60 p-2 m-2 rounded-lg flex flex-col items-center justify-center p-10 shadow-[0_3px_10px_rgb(0,0,0,0.2)]"
+              >
+                <i class="fa-solid fa-school text-xl mt-2 mb-1"></i>
+                <p class="text-xl md:text-xl font-medium mb-1">School</p>
+                <p class="text-gray-200 text-sm text-center md:text-md">Maharashtra Vidyalaya, Barshi</p>
+              </div>
+              <div
+                class="bg-gray-800 text-gray-200 h-36 w-60 p-2 m-2 rounded-lg flex flex-col items-center justify-center p-10 shadow-[0_3px_10px_rgb(0,0,0,0.2)]"
+              >
+                <i class="fa-solid fa-graduation-cap text-xl mt-2 mb-1"></i>
+                <p class="text-xl md:text-xl font-medium mb-1">College</p>
+                <p class="text-gray-200 text-sm md:text-md text-center">MIT Academy of Engineering-Alandi</p>
+              </div>
+            </div>
+            <p
+              class="mt-2 text-base text-white text-justify leading-relaxed justify-start px-[50px]"
+            >
+              Passion ignites pixels! I'm a
+              <span class="font-normal text-blue-600">web developer</span>
+              weaving beautiful, logical interfaces with
+              <span class="font-normal text-blue-600">React</span>,
+              <span class="font-normal text-blue-600">MongoDB</span>, and
+              <span class="font-normal text-blue-600">JavaScript</span>.
+              <span class="font-normal text-blue-600">Tailwind CSS</span> is my
+              secret weapon, enhancing aesthetics without sacrificing
+              performance. My
+              <span class="font-normal text-blue-600">C/C++</span> roots ensure
+              efficient problem-solving, while my adaptable skills craft
+              responsive, dynamic web experiences. Clean code crusader, tech
+              explorer, forever learning, always innovating - let's build
+              something amazing together!
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+
+      <!-- Experimence -->
+      <div
+        id="Experience"
+        class="flex items-center justify-center flex-col mt-5 min-w-screen min-h-screen space-y-32 mb-[100px]"
+      >
+        <div class="flex items-center justify-center flex-col">
+          <p class="text-[#39A7FF]">Explore Me</p>
+          <p class="text-3xl font-normal text-[#fff]">Experience</p>
+        </div>
+        <div class="grid grid-cols-1 gap-y-7 md:grid-cols-2  items-center justify-center">
+          <div
+            class="min-w-96 min-h-60 mx-5 bg-gray-800 text-gray-200 rounded-lg flex items-center flex-col p-10 shadow-[0_3px_10px_rgb(0,0,0,0.2)]"
+          >
+            <div class="text-2xl mb-6 font-bold tex-[#6E7C7C] mt-3">
+              <p>Languages</p>
+            </div>
+            <div class="grid grid-cols-2 gap-x-24 gap-y-9">
+              <div class="flex items-center space-x-2">
+                <img
+                  width="28"
+                  height="28"
+                  src="https://img.icons8.com/fluency/48/c-programming.png"
+                  alt="c-programming"
+                />
+                <p>C</p>
+              </div>
+              <div class="flex items-center space-x-2">
+                <img
+                  width="28"
+                  height="28"
+                  src="https://img.icons8.com/color/48/c-plus-plus-logo.png"
+                  alt="c-plus-plus-logo"
+                />
+                <p class="text">C++</p>
+              </div>
+              <div class="flex items-center space-x-2">
+                <img
+                  width="28"
+                  height="28"
+                  src="https://img.icons8.com/color/48/html-5--v1.png"
+                  alt="html-5--v1"
+                />
+                <p>HTML</p>
+              </div>
+              <div class="flex items-center space-x-2">
+                <img
+                  width="28"
+                  height="28"
+                  src="https://img.icons8.com/color/48/css3.png"
+                  alt="css3"
+                />
+                <p>CSS</p>
+              </div>
+              <div class="flex items-center space-x-2">
+                <img
+                  width="28"
+                  height="28"
+                  src="https://img.icons8.com/fluency/48/javascript.png"
+                  alt="javascript"
+                />
+                <p>JavaScript</p>
+              </div>
+              <div class="flex items-center space-x-2">
+                <img
+                  width="28"
+                  height="28"
+                  src="https://img.icons8.com/fluency/48/python.png"
+                  alt="python"
+                />
+                <p>Python</p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="min-w-96 min-h-60 mx-5 bg-gray-800 rounded-lg flex items-center flex-col p-10 shadow-[0_3px_10px_rgb(0,0,0,0.2)] text-gray-200"
+          >
+            <div class="text-2xl mb-6 font-bold tex-[#6E7C7C] mt-3">
+              <p>FrameWorks & Others</p>
+            </div>
+            <div class="grid grid-cols-2 gap-x-20 gap-y-9">
+              <div class="flex items-center space-x-2">
+                <img
+                  width="28"
+                  height="28"
+                  src="https://img.icons8.com/color/48/tailwindcss.png"
+                  alt="tailwindcss"
+                />
+                <p>TailwindCSS</p>
+              </div>
+              <div class="flex items-center space-x-2">
+                <img
+                  width="28"
+                  height="28"
+                  src="https://img.icons8.com/color/48/nodejs.png"
+                  alt="nodejs"
+                />
+                <p class="text">NodeJs</p>
+              </div>
+              <div class="flex items-center space-x-2">
+                <img
+                  width="28"
+                  height="28"
+                  src="https://img.icons8.com/color/48/git.png"
+                  alt="git"
+                />
+                <p>Git</p>
+              </div>
+              <div class="flex items-center space-x-2">
+                <img
+                  width="28"
+                  height="28"
+                  src="https://img.icons8.com/ios-glyphs/30/github.png"
+                  alt="github"
+                />
+                <p>GitHub</p>
+              </div>
+              <div class="flex items-center space-x-2">
+                <img
+                  width="28"
+                  height="28"
+                  src="https://img.icons8.com/color/48/react-native.png"
+                  alt="react-native"
+                />
+                <p>React</p>
+              </div>
+              <div class="flex items-center space-x-2">
+                <img
+                  width="28"
+                  height="28"
+                  src="https://img.icons8.com/fluency/48/figma.png"
+                  alt="figma"
+                />
+                <p>Figma</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projects -->
+
+      <div
+        class="flex items-center justify-center flex-col mt-5 min-w-screen min-h-screen"
+        id="Project"
+      >
+        <div class="mb-[80px]">
+          <p class="text-3xl text-[#fff]">
+            Portfolio Show<span class="text-[#39A7FF]">Case</span>
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-x-20 gap-y-8 mb-auto">
+            <div class="flex flex-col bg-gray-800 shadow-sm rounded-xl w-[350px]">
+             <div class="flex items-center justify-center p-5">
+              <img class="w-[400px] h-auto rounded-md shadow-lg border border-b border-black" src="https://i.pinimg.com/564x/cd/21/c3/cd21c3f550e898cf44e7091bbaad3e65.jpg" alt="Image Description">
+             </div>
+              <div class="p-4 md:p-5">
+                <h3 class="text-lg font-bold text-gray-50">
+                  Project-1
+                </h3>
+                <p class="mt-1 text-gray-400">
+                  Some quick example text to build on the card title and make up the bulk of the card's content.
+                </p>
+               <div class="flex items-center justify-between px-3 py-5">
+                <a class="mt-2 py-2 px-3 inline-flex justify-center items-center gap-x-2 text-sm  rounded-lg border border-transparent bg-gray-700 text-white hover:bg-gray-600 disabled:opacity-50 disabled:pointer-events-none" href="https://github.com/krishmungase/PortFolio-Krish_Mungase" target="_blank">
+                  view Code
+                 </a>
+                <a class="mt-2 py-2 px-3 inline-flex justify-center items-center gap-x-2 text-sm rounded-lg border border-transparent bg-gray-700 text-white hover:bg-gray-600 disabled:opacity-50 disabled:pointer-events-none" href="https://krishmungase-portfolio.vercel.app/" target="_blank">
+                 Live Demo
+                </a>
+               </div>
+              </div>
+            </div>
+
+            <div class="flex flex-col bg-gray-800 shadow-sm rounded-xl w-[350px]">
+              <div class="flex items-center justify-center p-5">
+                <img class="w-[400px] h-auto rounded-md" src="https://i.pinimg.com/564x/8d/27/b0/8d27b0c1a93619840583d800540e2af9.jpg" alt="Image Description">
+               </div>
+              <div class="p-4 md:p-5">
+                <h3 class="text-lg font-bold text-gray-50">
+                  Project-2
+                </h3>
+                <p class="mt-1 text-gray-400">
+                  Some quick example text to build on the card title and make up the bulk of the card's content.
+                </p>
+                <div class="flex items-center justify-between px-3 py-5">
+                  <a class="mt-2 py-2 px-3 inline-flex justify-center items-center gap-x-2 text-sm  rounded-lg border border-transparent bg-gray-700 text-white hover:bg-gray-600 disabled:opacity-50 disabled:pointer-events-none" href="https://github.com/krishmungase/tour" target="_blank">
+                    view Code
+                   </a>
+                  <a class="mt-2 py-2 px-3 inline-flex justify-center items-center gap-x-2 text-sm  rounded-lg border border-transparent bg-gray-700 text-white hover:bg-gray-600 disabled:opacity-50 disabled:pointer-events-none" href="https://tourvibe.vercel.app/" target="_blank">
+                   Live Demo
+                  </a>
+                 </div>
+              </div>
+            </div>
+
+            <div class="flex flex-col bg-gray-800 shadow-sm rounded-xl w-[350px]">
+              <div class="flex items-center justify-center p-5">
+                <img class="w-[400px] h-auto rounded-md" src="https://i.pinimg.com/564x/d1/1a/d8/d11ad80620acf2ad164f344f527da787.jpg" alt="Image Description">
+               </div>
+              <div class="p-4 md:p-5">
+                <h3 class="text-lg font-bold text-gray-50">
+                  Project-3
+                </h3>
+                <p class="mt-1 text-gray-400">
+                  Some quick example text to build on the card title and make up the bulk of the card's content.
+                </p>
+                <div class="flex items-center justify-between px-3 py-5">
+                  <a class="mt-2 py-2 px-3 inline-flex justify-center items-center gap-x-2 text-sm rounded-lg border border-transparent bg-gray-700 text-white hover:bg-gray-600 disabled:opacity-50 disabled:pointer-events-none" href="https://github.com/krishmungase/top-courses" target="_blank">
+                    view Code
+                   </a>
+                  <a class="mt-2 py-2 px-3 inline-flex justify-center items-center gap-x-2 text-sm  
+                  rounded-lg border border-transparent bg-gray-700 text-white hover:bg-gray-600 disabled:opacity-50 disabled:pointer-events-none" href="https://top-courses-gules.vercel.app/" target="_blank">
+                   Live Demo
+                  </a>
+                 </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+      
+<!-- Contact -->
+      <div
+        class="flex items-center justify-center flex-col mt-5 min-w-screen min-h-screen"
+        id="Connect"
+      >
+        <div class="">
+          <p class="text-3xl font-normal text-[#fff] py-10">
+            <span class="text-[#39A7FF]">Let'</span>s Connect
+          </p>
+        </div>
+        <div class="grid grid-cols-1 gap-y-4 md:grid-cols-2 min-h-full min-w-full">
+          <div class="flex items-center justify-center">
+            <dotlottie-player
+              src="https://lottie.host/e489a3d5-fe5a-4fc6-be54-7367fcb16594/KpY3Fk7p37.json"
+              background="transparent"
+              speed="1"
+              style="width: 450px; height: 450px"
+              loop
+              autoplay
+            ></dotlottie-player>
+          </div>
+          <div
+            class="flex items-center justify-center mb-auto flex-col min-h-full"
+          >
+            <div
+              class="w-3/4 h-14 bg-gray-800 rounded-lg mr-10 flex items-center justify-center flex-col p-4 shadow-[0_3px_10px_rgb(0,0,0,0.2)]"
+            >
+              <p class="text-xl text-gray-200">Connect With Me</p>
+            </div>
+            <div
+              class="w-3/4 h-32 bg-gray-800 rounded-lg mr-10 flex items-center justify-center flex-col p-20 my-5 shadow-[0_3px_10px_rgb(0,0,0,0.2)] text-gray-200"
+            >
+              <div class="flex items-center hover:text-gray-400">
+                <i
+                  class="fa-regular fa-envelope text-2xl text-center  hover:text-gray-400"
+                ></i>
+                <a
+                  href="https://mail.google.com/mail/u/1/#inbox"
+                  class="text-xl text-center text-gray-200 p-2 hover:text-gray-400"
+                  target="_blank"
+                  >mungasekrishna8@gmail.com</a
+                >
+              </div>
+              <div class="p-2 flex items-center justify-center space-x-4">
+                <div class="hover:text-gray-400">
+                  <i
+                    class="fa-brands fa-linkedin text-2xl px-2"
+                  ></i>
+                  <a
+                    href="https://www.linkedin.com/in/krishna-mungase-5365ab27b"
+                    class="text-xl text-black text-gray-200 hover:text-gray-400"
+                    target="_blank"
+                    >LinkedIn</a
+                  >
+                </div>
+                <div class="hover:text-gray-400">
+                  <i class="fa-brands fa-github text-2xl px-2 "></i>
+                  <a
+                    href=""
+                    class="text-xl text-black text-gray-200 hover:text-gray-400"
+                    target="_blank"
+                    >Github</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer
+      class="flex items-center justify-center bg-slate-900 flex-col "
+    >
+      <p class="text-lg md:text-xl underline text-[#EEEDED]">Join My Network</p>
+      <div class="text-2xl flex items-center justify-center space-x-2">
+        <a href="#" target="_blank"
+          ><i class="fa-brands fa-instagram text-lg md:text-2xl text-[#EEEDED] hover:text-rose-600"></i
+        ></a>
+        <a href="3" target="_blank"
+          ><i class="fa-brands fa-facebook text-lg md:text-2xl text-[#EEEDED] hover:text-[#39A7FF]"></i
+        ></a>
+        <a href="https://api.whatsapp.com/send?phone=9021107094" target="_blank"
+          ><i class="fa-brands fa-whatsapp text-lg md:text-2xl text-[#EEEDED] hover:text-[#15F5BA]"></i
+        ></a>
+        <a href="#"
+          ><i class="fa-brands fa-twitter text-lg md:text-2xl text-[#EEEDED] hover:text-[#39A7FF]"></i
+        ></a>
+      </div>
+      <p class="text-[#EEEDED] text-sm md:text-md">Copyright © 2024 Krishna Mungase. All Rights Reserved.</p>
+    </footer>
+  </body>
+  <script src="script.js"></script>
+</html>
